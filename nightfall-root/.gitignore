@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+
+# Django
+db.sqlite3
+*.log
+
+# Virtual env
+venv/
+env/
+nightfall-entorno/
+.env
+.env.*
+
+# OS / editor
+.vscode/
+.DS_Store
+
+#Windows
+Thumbs.db
+
