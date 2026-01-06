@@ -24,3 +24,15 @@ nightfall-entorno/
 #Windows
 Thumbs.db
 
+# Ignorar entorno virtual
+nightfall-entorno/
+venv/
+env/
+
+# Ignorar secretos de seguridad
+.env
+
+# Ignorar archivos de sistema y cache
+__pycache__/
+*.pyc
+

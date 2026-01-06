@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nightfall Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6", // Blue-500
+                        "background-light": "#f3f4f6", // Gray-100
+                        "background-dark": "#0f0f0f", // Very Dark Grey (Almost Black)
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a1a1a", // Dark Grey
+                        "accent-blue": "#0ea5e9", // Sky-500
+                        "accent-yellow": "#fbbf24", // Amber-400
+                        "text-secondary-dark": "#a1a1aa", // Zinc-400
+                        "text-secondary-light": "#6b7280", // Gray-500
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-sans min-h-screen p-4 md:p-6 transition-colors duration-200">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-green-600 dark:bg-green-500 rounded flex items-center justify-center">
+<span class="material-icons text-white">pie_chart</span>
+</div>
+<h1 class="text-xl font-semibold tracking-tight">Nightfall Snapshot <span class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark ml-2">by Bombardini miguelini</span></h1>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+<div class="xl:col-span-10 flex flex-col gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<div class="lg:col-span-3 flex flex-col gap-4">
+<div class="bg-card-light dark:bg-card-dark rounded-lg p-5 shadow-sm border border-gray-200 dark:border-white/10 h-full flex flex-col justify-center">
+<div class="text-4xl font-bold tracking-tight mb-1">$8,903</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark font-medium">Ganancia del mes</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg p-5 shadow-sm border border-gray-200 dark:border-white/10 h-full flex flex-col justify-center">
+<div class="text-4xl font-bold tracking-tight mb-1">$456</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark font-medium">Ganancia del día</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg p-5 shadow-sm border border-gray-200 dark:border-white/10 h-full flex flex-col justify-center">
+<div class="text-4xl font-bold tracking-tight mb-1 text-gray-900 dark:text-gray-200">-$265</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark font-medium">Ganancia de ayer</div>
+</div>
+</div>
+<div class="lg:col-span-9 bg-card-light dark:bg-card-dark rounded-lg p-6 shadow-sm border border-gray-200 dark:border-white/10 min-h-[300px] flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<h2 class="text-lg font-semibold">Graficas</h2>
+<div class="flex items-center gap-4 text-xs">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-accent-blue"></span>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">Nightfall</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-accent-yellow"></span>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">Syp500</span>
+</div>
+</div>
+</div>
+<div class="relative flex-1 w-full h-full min-h-[220px]">
+<div class="absolute inset-0 flex flex-col justify-between text-xs text-text-secondary-light dark:text-text-secondary-dark pointer-events-none">
+<div class="border-b border-gray-200 dark:border-white/5 w-full h-0 flex items-center"><span>$10K</span></div>
+<div class="border-b border-gray-200 dark:border-white/5 w-full h-0 flex items-center"><span>$5K</span></div>
+<div class="border-b border-gray-200 dark:border-white/5 w-full h-0 flex items-center"><span>$0</span></div>
+<div class="border-b border-gray-200 dark:border-white/5 w-full h-0 flex items-center"><span>-$5K</span></div>
+<div class="border-b border-gray-200 dark:border-white/5 w-full h-0 flex items-center"><span>-$10K</span></div>
+</div>
+<div class="absolute bottom-[-20px] left-0 right-0 flex justify-between text-xs text-text-secondary-light dark:text-text-secondary-dark px-8">
+<span>2 Jan</span>
+<span>9 Jan</span>
+<span>16 Jan</span>
+<span>23 Jan</span>
+<span>30 Jan</span>
+</div>
+<svg class="absolute inset-0 w-full h-full pt-2 pb-6 pl-8" preserveAspectRatio="none" viewBox="0 0 100 100">
+<path d="M0,50 C10,45 20,40 30,55 C40,65 50,45 60,40 C70,35 80,50 90,45 L100,40" fill="none" stroke="#fbbf24" stroke-width="0.5"></path>
+<path d="M0,55 C10,65 20,70 30,60 C40,55 50,45 60,35 C70,20 80,25 90,20 L100,15" fill="none" stroke="#0ea5e9" stroke-width="0.7"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<div class="lg:col-span-5 bg-card-light dark:bg-card-dark rounded-lg p-5 shadow-sm border border-gray-200 dark:border-white/10">
+<h2 class="text-lg font-semibold mb-4"> Comportamiento por accion</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead>
+<tr class="text-text-secondary-light dark:text-text-secondary-dark border-b border-gray-200 dark:border-white/10">
+<th class="pb-2 font-normal">Resumen</th>
+<th class="pb-2 font-normal">Nombre</th>
+<th class="pb-2 font-normal">Subidas/bajadas</th>
+<th class="pb-2 font-normal text-right">sector</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100 dark:divide-white/5">
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Robinson</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Premium</td>
+<td class="py-2.5 text-right font-medium">Tech</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Reece</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Basic</td>
+<td class="py-2.5 text-right font-medium">$189</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Armit</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">NGO</td>
+<td class="py-2.5 text-right font-medium">$59</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Anon</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Basic</td>
+<td class="py-2.5 text-right font-medium">$189</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-red-500/10 dark:bg-red-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-red-600 dark:text-red-400" style="font-size: 14px;">close</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Seecorp</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Basic</td>
+<td class="py-2.5 text-right font-medium">-$189</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Blumenford</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Premium</td>
+<td class="py-2.5 text-right font-medium">$355</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">GHY</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Enterprise</td>
+<td class="py-2.5 text-right font-medium">$989</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-red-500/10 dark:bg-red-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-red-600 dark:text-red-400" style="font-size: 14px;">close</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">Akshay</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Premium</td>
+<td class="py-2.5 text-right font-medium">-$355</td>
+</tr>
+<tr class="group hover:bg-gray-50 dark:hover:bg-white/5 transition">
+<td class="py-2.5">
+<div class="w-5 h-5 bg-blue-500/10 dark:bg-blue-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-blue-600 dark:text-blue-400" style="font-size: 14px;">arrow_upward</span>
+</div>
+</td>
+<td class="py-2.5 font-medium">DDF</td>
+<td class="py-2.5 text-text-secondary-light dark:text-text-secondary-dark">Basic</td>
+<td class="py-2.5 text-right font-medium">$89</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="lg:col-span-7 bg-card-light dark:bg-card-dark rounded-lg p-6 shadow-sm border border-gray-200 dark:border-white/10 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<h2 class="text-lg font-semibold">Acciones del portafolio</h2>
+<div class="flex items-center gap-4 text-xs">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-accent-blue"></span>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">Signups</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-accent-yellow"></span>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">Day 2 active</span>
+</div>
+</div>
+</div>
+<div class="relative flex-1 w-full flex items-center justify-center px-4 py-6">
+<div class="relative w-64 h-64">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+<circle class="text-accent-blue" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="188.5 251.2" stroke-width="20"></circle>
+<circle class="text-accent-yellow" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="62.8 251.2" stroke-dashoffset="-188.5" stroke-width="20"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="text-3xl font-bold text-gray-900 dark:text-white">75%</span>
+<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-1">Retention</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-2 flex flex-col justify-between gap-6 h-full">
+<div class="space-y-6">
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold tracking-tight">$984.6</span>
+<span class="text-xl font-medium text-text-secondary-light dark:text-text-secondary-dark">K</span>
+</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Valor Portafolio</div>
+</div>
+<div>
+<div class="text-4xl font-bold tracking-tight">9,875</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Rol</div>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold tracking-tight">23.5</span>
+<span class="text-2xl font-medium text-text-secondary-light dark:text-text-secondary-dark">K</span>
+</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Liquidez</div>
+</div>
+<div>
+<div class="text-4xl font-bold tracking-tight">5,145</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Volatilidad</div>
+</div>
+<div>
+<div class="text-4xl font-bold tracking-tight">4,581</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Sharp Ratio</div>
+</div>
+<div>
+<div class="text-4xl font-bold tracking-tight">8,959</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Timer para siguiente activacion</div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="bg-card-light dark:bg-card-dark bg-opacity-50 dark:bg-opacity-50 rounded-lg p-5 border border-gray-200 dark:border-white/10 relative overflow-hidden">
+<div class="flex items-baseline gap-1 z-10 relative">
+<span class="text-5xl font-bold tracking-tight">51.1</span>
+</div>
+<div class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1 z-10 relative">Tiempo para siguiente activacion (min/sec)</div>
+<div class="absolute -bottom-2 -right-2">
+<div class="w-12 h-12 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+<span class="material-icons text-white">check</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

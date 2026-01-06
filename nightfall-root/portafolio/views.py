@@ -6,4 +6,4 @@ def portafolio_index(request):
     return HttpResponse("hello word")
 
 def main_dashboard(request): 
-    return render(request,"main_dashboard.html")
+    return render(request,"dashboardFolder/dashboard.html")
